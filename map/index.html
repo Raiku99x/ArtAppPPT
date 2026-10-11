@@ -1390,11 +1390,10 @@ if(SHOWCASE){
  +'#shw .vg{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.45) 100%)}'
  +'#shw .cp{position:absolute;left:3.2%;bottom:7%;display:flex;align-items:center;gap:.9vw;font-weight:700;letter-spacing:.18em;font-size:2.5vw;color:#fff4d0;text-shadow:0 2px 8px #000;opacity:0}'
  +'#shw .cp:before{content:"";width:1.1vw;height:1.1vw;transform:rotate(45deg);background:linear-gradient(135deg,#f0e6d2,#c8aa6e);box-shadow:0 0 10px #0ac8b9}'
- +'#shw .bar{position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,#3ddbc0,#e6cf8a);box-shadow:0 0 8px #3ddbc0}'
  +'#shw .fd{position:absolute;inset:0;background:#05080f;opacity:1}';
  document.head.appendChild(st);
  const o=document.createElement('div');o.id='shw';o.innerHTML='<div class="vg"></div><div class="cp"></div><div class="bar"></div><div class="fd"></div>';document.body.appendChild(o);
- shCap=o.querySelector('.cp');shFade=o.querySelector('.fd');shBar=o.querySelector('.bar');
+ shCap=o.querySelector('.cp');shFade=o.querySelector('.fd');
  addEventListener('message',e=>{const m=e.data;if(!m||m.rift!=='show')return;
   if(m.cmd==='start'){SHW.t=0;SHW.last=performance.now();SHW.off=false;SHW.idx=-1}
   else if(m.cmd==='stop'){SHW.off=true}
@@ -1410,7 +1409,7 @@ function showTick(){const n=performance.now(),dt=Math.min(.05,(n-SHW.last)/1000)
  C.position.copy(P);C.lookAt(L);if(Math.abs(C.fov-fov)>.01){C.fov=fov;C.updateProjectionMatrix()}FM=s.fm||1;
  if(shFade){const fd=SHW.ready?Math.max(0,1-T/.9,1-(SHT-T)/.9):1;shFade.style.opacity=fd.toFixed(3);
   if(SHW.idx!==i){SHW.idx=i;shCap.textContent=s.k}
-  shCap.style.opacity=(lt<.5?lt/.5:lt>s.d-.5?(s.d-lt)/.5:1)*(SHW.ready?1:0);shBar.style.width=(T/SHT*100).toFixed(2)+'%'}}
+  shCap.style.opacity=(lt<.5?lt/.5:lt>s.d-.5?(s.d-lt)/.5:1)*(SHW.ready?1:0)}}
 (function loop(){if(SHOWCASE&&SHW.off&&SHW.ready&&SHW.warm--<=0){requestAnimationFrame(loop);return}if(GQF){const n=performance.now();if(n-GQT<1000/GQF-3){requestAnimationFrame(loop);return}GQT=n}tick();eggFx();bgmTick();if(EGG)eggTick();else if(TOUR)tourTick();else if(FPP)fppTick();else if(SHOWCASE)showTick();else cam();SKY.position.copy(C.position);if(!R.shadowMap.autoUpdate&&++GQN%GFX[GQ].su===0)R.shadowMap.needsUpdate=true;R.render(S,C);if(GFX[GQ].ad){const n=performance.now();if(GQA.l){GQA.s+=n-GQA.l;GQA.c++}GQA.l=n;if(GQA.c>=90){const ms=GQA.s/GQA.c;GQA.s=GQA.c=0;let pr=GQA.pr;const tg=GQF?1000/GQF:16.7;if(ms>tg*1.4)pr=Math.max(GFX[GQ].mn||.75,pr-.25);else if(ms<tg*1.05)pr=Math.min(GFX[GQ].pr,pr+.25);if(pr!==GQA.pr){GQA.pr=pr;R.setPixelRatio(Math.min(devicePixelRatio,pr));R.setSize(VPW(),VPH())}}}
  labTick();
  if(TOUR)tourUI();requestAnimationFrame(loop)})();
