@@ -48,7 +48,7 @@ h2{font:700 44px Cinzel,Georgia,serif;margin:6px 0 12px}
 .fx i{position:absolute;bottom:-10px;width:var(--z);height:var(--z);border-radius:50%;background:var(--c);box-shadow:0 0 calc(var(--z)*4) var(--c);opacity:0;animation:ember var(--d) linear infinite;animation-delay:var(--l)}
 @keyframes ember{0%{opacity:0;transform:translate(0,0)}12%{opacity:.9}80%{opacity:.6}100%{opacity:0;transform:translate(var(--x),-760px)}}
 @media (prefers-reduced-motion:reduce){.anim::before,.fx *{animation:none!important}}
-.mapkb{animation:kb 18s ease-in-out infinite alternate}.s.on .ph:hover .mapkb{transform:none}
+.mapkb{animation:kb 18s ease-in-out infinite alternate}.s:not(.on) .mapkb{animation-play-state:paused}.s.on .ph:hover .mapkb{transform:none}
 #mapph svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 #mapph .ring{transform-box:fill-box;transform-origin:center;animation:ring2 2.4s ease-out infinite;fill:none;stroke-width:2}@keyframes ring2{from{transform:scale(1);opacity:.9}to{transform:scale(2.6);opacity:0}}
 #mapph .sweep{opacity:.55;animation-duration:15s}
