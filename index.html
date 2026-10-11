@@ -108,6 +108,9 @@ h2{font:700 44px Cinzel,Georgia,serif;margin:6px 0 12px}
 .ld .pb i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cl),#fff)}
 .ld .ft{position:absolute;bottom:14px;width:100%;text-align:center;font-size:20px;letter-spacing:.2em;color:#d9cfae;text-shadow:0 2px 4px #000}
 .ld .ft em{font-style:normal;color:#fff}
+.note{grid-column:1/-1;display:flex;align-items:center;gap:18px;padding:11px 26px;border-radius:18px;background:linear-gradient(90deg,rgba(29,42,61,.95),rgba(29,42,61,.6));border:1px solid rgba(61,219,192,.35);border-left:4px solid var(--teal);font-size:17.5px;line-height:1.5;color:#e8e2d2}
+.note .ni{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(61,219,192,.15);color:var(--teal);font-size:16px}
+.note a{color:var(--teal);font-weight:600;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:1px;transition:color .2s}.note a.am{color:var(--amber)}.note a:hover{color:#fff}
 .mini{position:relative;width:556px;height:313px;border-radius:20px;overflow:hidden}.mini .ld{transform:scale(.3475)}
 .tg{position:absolute;transform:translate(-50%,-50%);background:linear-gradient(180deg,#0f1e38,#091428);color:#f0e6d2;font:700 11.5px Cinzel,Georgia,serif;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px 5px 22px;border:1.5px solid;border-image:linear-gradient(180deg,#f0e6d2,#c8aa6e 40%,#785a28) 1;box-shadow:0 0 12px rgba(200,170,110,.35),0 3px 10px #000c,inset 0 0 8px rgba(10,200,185,.18);text-shadow:0 1px 2px #000;white-space:nowrap}
 .tg::before{content:"";position:absolute;left:8px;top:50%;width:6px;height:6px;margin-top:-3px;background:linear-gradient(135deg,#f0e6d2,#c8aa6e);transform:rotate(45deg);box-shadow:0 0 6px #0ac8b9}
@@ -191,11 +194,12 @@ h2{font:700 44px Cinzel,Georgia,serif;margin:6px 0 12px}
 <!-- 7 OUTPUT -->
 <section class="s">
  <div class="hd"><div class="eb">Project Output</div><h2>Proposed Visual Output</h2><div class="bar"></div></div>
- <div class="body" style="grid-template-columns:1fr 1fr;grid-template-rows:313px auto;top:182px;gap:18px 24px">
+ <div class="body" style="grid-template-columns:1fr 1fr;grid-template-rows:313px auto auto;top:174px;bottom:70px;gap:12px 24px">
   <div class="ph rise" id="mapph" style="border-radius:20px"><img class="mapkb" data-k="s03"></div>
   <div class="mini rise"></div>
   <div class="rise"><h3 style="color:var(--teal);font-size:24px;margin-bottom:6px">01 3D BATTLEFIELD MAP</h3><p style="color:var(--mut);font-size:18px">Paths • Jungle • Bases • Towers</p></div>
   <div class="rise"><h3 style="color:var(--amber);font-size:24px;margin-bottom:6px">02 LOADING SCREEN</h3><p style="color:var(--mut);font-size:18px">Team presentation • Color • Composition</p></div>
+  <div class="note rise"><span class="ni">&#9670;</span><p>You can explore our complete battlefield map by visiting the <a href="https://github.com/Raiku99x/ArtApp3dLoLMap" target="_blank" rel="noopener">Battle for the Rift: 3D Map</a> website. For our loading screen design, you can check out the <a class="am" href="https://github.com/Raiku99x/ArtAppLoadingScreen" target="_blank" rel="noopener">Battle for the Rift: Loading Screen</a> website.</p></div>
  </div>
 </section>
 
